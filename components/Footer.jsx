@@ -1,0 +1,131 @@
+import Link from "next/link";
+import Image from "next/image";
+import React from "react";
+
+export default function Footer() {
+	const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
+	const legal = ["Terms", "Privacy", "Legal"];
+	return (
+		<div className="relative py-5 px-10">
+			<div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
+				<div className="lg:col-span-2">
+					<div>
+						<Link
+							href="/"
+							className="flex items-center space-x-2 text-2xl font-medium text-gray-100"
+						>
+							<Image
+								src="/Jagdamba.png"
+								alt="N"
+								width="35"
+								height="35"
+								className="w-10 mr-2"
+							/>
+							<span>Jagdamba Properties & Constructions</span>
+						</Link>
+					</div>
+
+					<div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
+						We are a leading Real Estate Agent, Property Dealer & Construction
+						Company in West Delhi, providing comprehensive services.
+					</div>
+				</div>
+
+				<div>
+					<div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
+						{navigation.map((item, index) => (
+							<Link
+								key={index}
+								href="/"
+								className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-yellow-500 focus:text-black focus:bg-white focus:outline-none dark:focus:bg-trueGray-700"
+							>
+								{item}
+							</Link>
+						))}
+					</div>
+				</div>
+				<div>
+					<div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
+						{legal.map((item, index) => (
+							<Link
+								key={index}
+								href="/"
+								className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-yellow-500 focus:text-black focus:bg-white focus:outline-none dark:focus:bg-trueGray-700"
+							>
+								{item}
+							</Link>
+						))}
+					</div>
+				</div>
+				<div className="">
+					<div>Follow us</div>
+					<div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
+						<a
+							href="https://www.youtube.com/channel/UC6apqutPtJWNvh6YylreRyA"
+							target="_blank"
+							rel="noopener"
+						>
+							<span className="sr-only">Twitter</span>
+							<Youtube />
+						</a>
+						<a
+							href="https://www.facebook.com/jagdambapropertiess/"
+							target="_blank"
+							rel="noopener"
+						>
+							<span className="sr-only">Facebook</span>
+							<Facebook />
+						</a>
+						<a
+							href="https://www.instagram.com/jagdamba_property/"
+							target="_blank"
+							rel="noopener"
+						>
+							<span className="sr-only">Instagram</span>
+							<Instagram />
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
+				Copyright © {new Date().getFullYear()} Jagdamba Properties.
+			</div>
+		</div>
+	);
+}
+
+const Youtube = ({size = 24}) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		fill="currentColor"
+		width={size}
+		height={size}
+		viewBox="0 0 16 16"
+	>
+		<path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+	</svg>
+);
+
+const Facebook = ({size = 24}) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width={size}
+		height={size}
+		viewBox="0 0 24 24"
+		fill="currentColor"
+	>
+		<path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07" />
+	</svg>
+);
+const Instagram = ({size = 24}) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width={size}
+		height={size}
+		viewBox="0 0 24 24"
+		fill="currentColor"
+	>
+		<path d="M16.98 0a6.9 6.9 0 0 1 5.08 1.98A6.94 6.94 0 0 1 24 7.02v9.96c0 2.08-.68 3.87-1.98 5.13A7.14 7.14 0 0 1 16.94 24H7.06a7.06 7.06 0 0 1-5.03-1.89A6.96 6.96 0 0 1 0 16.94V7.02C0 2.8 2.8 0 7.02 0h9.96zm.05 2.23H7.06c-1.45 0-2.7.43-3.53 1.25a4.82 4.82 0 0 0-1.3 3.54v9.92c0 1.5.43 2.7 1.3 3.58a5 5 0 0 0 3.53 1.25h9.88a5 5 0 0 0 3.53-1.25 4.73 4.73 0 0 0 1.4-3.54V7.02a5 5 0 0 0-1.3-3.49 4.82 4.82 0 0 0-3.54-1.3zM12 5.76c3.39 0 6.2 2.8 6.2 6.2a6.2 6.2 0 0 1-12.4 0 6.2 6.2 0 0 1 6.2-6.2zm0 2.22a3.99 3.99 0 0 0-3.97 3.97A3.99 3.99 0 0 0 12 15.92a3.99 3.99 0 0 0 3.97-3.97A3.99 3.99 0 0 0 12 7.98zm6.44-3.77a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z" />
+	</svg>
+);
