@@ -42,22 +42,27 @@ const Faq = () => {
 
 const faqdata = [
 	{
-		question: "Is this template completely free to use?",
-		answer: "Yes, this template is completely free to use.",
-	},
-	{
-		question: "Can I use it in a commercial project?",
-		answer: "Yes, this you can.",
-	},
-	{
-		question: "What is your refund policy? ",
+		question:
+			"What services does your real estate business offer in West Delhi?",
 		answer:
-			"If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+			"We provide a wide range of services, including buying and selling properties, real estate investment consulting, property management, building design, general contracting, construction management, home renovation, and improvement.",
 	},
 	{
-		question: "Do you offer technical support? ",
+		question: "Can you tell me more about your team and their expertise?",
 		answer:
-			"No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+			"Our team comprises experienced professionals such as real estate agents, builders, architects, and interior designers. They work closely with clients to ensure that every project is tailored to meet their specific needs and preferences.",
+	},
+	{
+		question:
+			"How do you assist clients in the property buying and selling process? ",
+		answer:
+			"As real estate agents, we have a deep understanding of the local market and regulations. We help clients find the right properties to buy and ensure a smooth selling process for those looking to sell their properties.",
+	},
+	{
+		question:
+			"Why should clients trust you as a property dealer and real estate broker?",
+		answer:
+			"We have a solid reputation in West Delhi, backed by our in-depth knowledge of the local real estate market and regulations. Our commitment to client satisfaction and ethical practices sets us apart.",
 	},
 ];
 
