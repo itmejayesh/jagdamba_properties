@@ -4,7 +4,11 @@ import React from "react";
 
 export default function Footer() {
 	const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
-	const legal = ["Terms", "Privacy", "Legal"];
+	const legal = [
+		{title: "Terms", url: "/"},
+		{title: "Privacy Policy", url: "/privacypolicy"},
+		{title: "Legal", url: "/"},
+	];
 	return (
 		<div className="relative py-5 px-10">
 			<div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
@@ -49,10 +53,10 @@ export default function Footer() {
 						{legal.map((item, index) => (
 							<Link
 								key={index}
-								href="/"
+								href={`${item.url}`}
 								className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-yellow-500 focus:text-black focus:bg-white focus:outline-none dark:focus:bg-trueGray-700"
 							>
-								{item}
+								{item.title}
 							</Link>
 						))}
 					</div>
